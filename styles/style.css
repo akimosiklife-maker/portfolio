@@ -92,69 +92,56 @@ body{
     padding: 16px 250px;
 }
 
+        /* БЛОК С ЦЕНАМИ НА КАРТОЧКАХ ТОВАРА */
 .zagolovok-center{
     text-align: center;
+    padding: 16px 0 32px 0;
+    margin: 0;
 }
 
-.content{
+.cards{
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items:stretch;
     padding: 0;
     margin: auto;
     gap: 10px;
     flex-wrap: wrap;
 }
 
-.divan{
+.card{
     display: flex;
     flex-direction: column;
     background-color: whitesmoke;
-    height: auto;
     max-width: 200px;
     width: 100%;
     gap: 10px;
-    padding: 0;
-    margin: 0;
-}
-
-.kreslo{
-    display: flex;
-    flex-direction: column;
-    background-color: whitesmoke;
-    
-    max-width: 200px;
-    width: 100%;
-    gap: 10px;
-    padding: 0;
-    margin: 0;
-}
-
-.matras{
-    display: flex;
-    flex-direction: column;
-    background-color: whitesmoke;
-    
-    max-width: 200px;
-    width: 100%;
-    gap: 10px;
-    padding: 0;
-    margin: 0;
-}
-
-.kover{
-    display: flex;
-    flex-direction: column;
-    background-color: whitesmoke;
-    height: auto;
-    max-width: 200px;
-    width: 100%;
-    gap: 10px;
-    padding: 0;
-    margin: 0;
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 20px;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 5);
 }
 
 img.card-image{
     height: auto;
-    width: 200px;
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 2);
 }
+
+.inform-cards{
+    margin: 10px 0x;
+    flex-grow: 1;
+}
+
+.price{
+    margin-top: auto;
+}
+
+.price-luck{
+    padding: 3px 5px;
+    border-radius: 5px;
+    background-color: #3882F6;
+    color: white;
+}
+
