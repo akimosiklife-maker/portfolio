@@ -7,23 +7,28 @@ body{
     padding: 0;
     margin: 0;
 }
+
 .header-fon{
     background-color: #1F2937;
     padding: 16px 250px;
 }
+
 .header{
     display: flex;
     flex: 1;
     align-items: center;
     justify-content: space-between;
 }
+
 .logo{
     color: #F9FAF8;
 }
+
 .links ul{
     display: flex;
     list-style: none;
 }
+
 .links a{
     text-decoration: none;
     color: #F9FAF8;
@@ -31,15 +36,18 @@ body{
     padding: 10px;
     border-radius: 8px;
 }
+
 .links a:hover{
     background-color: #1f72f8;
 }
+
 .block{
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin: 100px 0;
 }
+
 .name-opis{
     max-width: 600px;
     width: 100%;
@@ -47,16 +55,17 @@ body{
     flex-direction: column;
     color: #F9FAF8;
 }
+
 .name{
     font-size: 48px;
-    margin: 0;
-    
-    
+    margin: 0;  
 }
+
 .opis{
     font-size: 18px;
     margin:0 0 10px 0;
 }
+
 .call{
     padding: 10px;
     background-color: #3882F6;
@@ -66,13 +75,86 @@ body{
     text-decoration: none;
     font-weight: bold;
 }
+
 .call:hover{
     background-color: #1f72f8;
 }
+
 .image{
     height: auto;
     max-width: 500px;
     width: 100%;
     border-radius: 8px;
     box-shadow: 1px 4px 6px rgb(255, 255, 255); 
+}
+
+.content-fon{
+    padding: 16px 250px;
+}
+
+.zagolovok-center{
+    text-align: center;
+}
+
+.content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    margin: auto;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.divan{
+    display: flex;
+    flex-direction: column;
+    background-color: whitesmoke;
+    height: auto;
+    max-width: 200px;
+    width: 100%;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+}
+
+.kreslo{
+    display: flex;
+    flex-direction: column;
+    background-color: whitesmoke;
+    
+    max-width: 200px;
+    width: 100%;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+}
+
+.matras{
+    display: flex;
+    flex-direction: column;
+    background-color: whitesmoke;
+    
+    max-width: 200px;
+    width: 100%;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+}
+
+.kover{
+    display: flex;
+    flex-direction: column;
+    background-color: whitesmoke;
+    height: auto;
+    max-width: 200px;
+    width: 100%;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+}
+
+img.card-image{
+    height: auto;
+    width: 200px;
 }
