@@ -98,7 +98,7 @@ body{
     max-width: 500px;
     width: 100%;
     border-radius: 8px;
-    box-shadow: 1px 4px 6px rgb(255, 255, 255); 
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.5); 
     transition: 0.2s;
     cursor: pointer;
 }
@@ -295,5 +295,47 @@ body{
     color: rgb(187, 187, 187);
     font-size: 14px;
 }
+    
+    /*Адаптация*/
 
+@media (max-width: 768px){
+    .header-fon{
+        border-radius: 0 0 100% 0;
+    }
+    .header{
+        flex-direction: column;
+        gap: 15px;
+    }
+    .logo{
+        padding: 0;
+        margin: 30px auto 0 auto;
+    }
+    .links ul{
+        padding: 0;
+        margin: 0 auto;
+    }
+    
+    .name {
+        display: inline;
+        font-size: 30px;
+        text-align: left;
+        width: 200px;
+        margin-top: 0;
+    }
+
+    .block{
+        flex-direction: column;
+        margin: 30px auto;
+    }
+
+    .opis{
+        margin: 10px 0 5px 0;
+        max-width: 250px;
+        width: 100%;
+    }
+
+    .vizitka{
+
+    }
+}
 
