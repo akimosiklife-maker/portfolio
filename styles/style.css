@@ -12,7 +12,8 @@ body{
     background-color: #1F2937;
     width: 100%;
     padding: 0 10%;  
-    /*padding: 16px 250px;*/
+    border-radius: 0 0 15% 15%;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);
 }
 
 .header{
@@ -113,7 +114,6 @@ body{
     padding: 0 10%;
     max-width: 1650px;
     margin: 0 auto;
-    /*padding: 16px 250px;*/
 }
 
         /* БЛОК С ЦЕНАМИ НА КАРТОЧКАХ ТОВАРА */
@@ -187,6 +187,8 @@ body{
     padding: 80px 0;
     margin-top: 50px;
     background-color: #88919e;
+    border-radius: 10% 0;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);
 }
 .information{
     display: flex;
@@ -214,3 +216,84 @@ body{
     padding: 0;
     margin: 0;
 }
+
+.container-for-fon{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;   
+    width: 100%;
+}
+
+.blue-fon{
+    display: flex;
+    flex-direction: column;
+    background-color: #1f72f8;
+    padding: 50px 150px;
+    margin: 50px;
+    max-width: 1000px;
+    width: 100%;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);  
+}
+
+.text-phone, .text-phone-info, .call{
+    margin: 0;
+    padding: 5px;
+    color: white;
+}
+
+.priziv{
+    display: flex;
+    justify-content: space-between;
+}
+
+.text-phone{
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.text-phone-info{
+    font-size: 18px;
+}
+
+.call-phone {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.phone-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3882F6;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.2s;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);
+}
+
+.phone-button:hover {
+    background-color: #1F2937;
+    transform: scale(1.02);
+}
+
+.phone-button:active {
+    transform: scale(0.95);
+}
+
+.container-flooter{
+    background-color: #1F2937;
+    padding: 15px;
+    width: auto;
+}
+
+.text{
+    text-align: center;
+    color: rgb(187, 187, 187);
+    font-size: 14px;
+}
+
+
