@@ -1,6 +1,7 @@
 *{
     box-sizing: border-box;
     font-family: sans-serif, Arial, Helvetica;
+    -webkit-tap-highlight-color: transparent;
 }
 body{
     display: flex;
@@ -188,159 +189,147 @@ body{
     box-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-    /*Информационный блок*/
+    /*Фотки до после*/
 
 .info-fon {
     display: flex;
     justify-content: center;
     padding: 10px 0;
-   
-    
+    background-color: #1F2937;
+    max-width: 1020px;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 18px;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);
 }
 
 .gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
-    max-width: 1000px;        /* 2 × 300px + 2 × 16px + padding */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 колонки */
+    gap: 8px;
+    max-width: 980px;
     width: 100%;
-    max-height: 500px;
-    overflow-y: auto;
+    margin: 0 auto;
     padding: 16px;
-    margin: 0 auto;          /* центрирует блок */
-    justify-content: left; /* центрирует картинки внутри */
-    border-radius: 15px;
-    background-color: #1F2937;
-    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);
 }
 
+.gallery a {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1 / 1; /* квадратные плитки, как в инсте */
+    overflow: hidden;
+    border-radius: 8px;
+}
 
-.gallery img {
-    width: calc(50% - 16px);
-    max-width: 300px;        /* ограничиваем максимальную ширину */
-    height: 200px;
-    object-fit: cover;       /* картинка обрезается, не растягивается */
-    border-radius: 12px;
-    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);
+.gallery a img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
     transition: 0.2s;
+}
+
+.gallery a img:hover {
+    transform: scale(1.05);
+}
+
+/* Лайтбокс */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.lightbox:target {
+    display: flex;
+}
+
+.lightbox-bg {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
     cursor: pointer;
 }
 
-.gallery img:hover {
-    transform: scale(1.4);
+.lightbox-img {
+    position: relative;
+    z-index: 2;
+    max-width: 90%;
+    max-height: 90%;
+    width: auto;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+    cursor: default;
 }
 
+.lightbox:target {
+    display: flex;
+}
 
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 36px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.2s;
+}
 
+.close:hover {
+    color: #ccc;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-.info-fon{
+.container-for-fon {
     display: flex;
     justify-content: center;
-    padding: 80px 0;
-    margin-top: 50px;
-    background-color: #88919e;
-    border-radius: 10% 0;
-    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);
-}
-
-.information{
-    display: flex;
-    justify-content:center;
-    align-items: center;
-    flex-direction: column;
-    max-width: 1000px;    
-    width: 100%;
-    
-}
-.info-text{
-    font-size: 24px;
-    font-style: oblique;
-    line-height: 1.5;
-    margin: 0;  
-}
-
-.for-opis{
-    align-self: flex-end;
-}
-
-.podpis{
-    font-size: 18px;
-    font-weight: bold;
-    padding: 0;
-    margin: 0;
-} */
-
-.container-for-fon{
-    display: flex;
-    justify-content:center;
-    align-items: center;
-    flex-direction: column;
-    margin: 0 auto;   
+    margin: 0 auto;
     width: 100%;
 }
 
-.blue-fon{
+.blue-fon {
     display: flex;
     flex-direction: column;
     background-color: #1f72f8;
-    padding: 50px 150px;
-    margin: 50px;
+    padding: 50px 10%;
+    margin: 50px auto;
     max-width: 1000px;
     width: 100%;
-    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);  
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 12px;
 }
 
-.text-phone, .text-phone-info, .call{
+.text-phone,
+.text-phone-info {
     margin: 0;
     padding: 5px;
     color: white;
 }
 
-.priziv{
+.priziv {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
 }
 
-.text-phone{
+.text-phone {
     font-size: 28px;
     font-weight: bold;
 }
 
-.text-phone-info{
+.text-phone-info {
     font-size: 18px;
-}
-
-.call-phone {
-    display: flex;
-    margin: 0;
-    padding: 0;
 }
 
 .phone-button {
@@ -442,6 +431,9 @@ body{
         font-size: 18px;
     }
 
+    .gallery {
+        grid-template-columns: repeat(2, 1fr); /* 2 колонки на телефоне */
+    }
 }
 
 
